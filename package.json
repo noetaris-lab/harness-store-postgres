@@ -1,0 +1,46 @@
+{
+  "name": "@noetaris/harness-store-postgres",
+  "version": "0.1.0",
+  "description": "PostgreSQL session store for @noetaris/harness",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "build": "tsup",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "prepublishOnly": "pnpm build && pnpm test",
+    "publish:npm": "pnpm publish --access public --no-git-checks"
+  },
+  "files": [
+    "dist"
+  ],
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild"
+    ]
+  },
+  "peerDependencies": {
+    "@noetaris/harness": "*",
+    "pg": ">=8"
+  },
+  "devDependencies": {
+    "@noetaris/harness": "link:../core",
+    "@types/node": "^25.9.1",
+    "@types/pg": "^8.20.0",
+    "pg": "^8.21.0",
+    "tsup": "^8.5.1",
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.7"
+  }
+}

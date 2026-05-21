@@ -1,0 +1,14 @@
+# Source & config — dist/ is the published artifact
+src/
+tsconfig.json
+tsup.config.ts
+vitest.config.ts
+pnpm-lock.yaml
+
+# Dev artifacts
+.tmp/
+.logs/
+node_modules/
+
+# Source maps — not useful to consumers without the source
+dist/*.js.map
