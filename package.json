@@ -2,6 +2,14 @@
   "name": "@noetaris/harness-store-postgres",
   "version": "0.1.0",
   "description": "PostgreSQL session store for @noetaris/harness",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/noetaris-lab/harness-store-postgres.git"
+  },
+  "homepage": "https://github.com/noetaris-lab/harness-store-postgres#readme",
+  "bugs": {
+    "url": "https://github.com/noetaris-lab/harness-store-postgres/issues"
+  },
   "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",

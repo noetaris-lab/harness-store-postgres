@@ -5,3 +5,4 @@
  */
 export { PostgresSessionStore } from './store/postgres-session-store.js'
 export type { PostgresSessionStoreOptions } from './store/postgres-session-store.js'
+export { ConcurrentModificationError, BranchNotFoundError, LeaseNotFoundError } from './errors.js'
